@@ -33,8 +33,12 @@ mod tests {
     fn your_order() {
         let order_template = create_order_template();
 
-        // TODO: Create your own order using the update syntax and template above!
-        // let your_order =
+        // 使用结构体更新语法创建新实例
+        let your_order = Order {
+            name: String::from("Hacker in Rust"),
+            count: 1,
+            ..order_template  // 继承模板的其他字段
+        };
 
         assert_eq!(your_order.name, "Hacker in Rust");
         assert_eq!(your_order.year, order_template.year);
@@ -45,4 +49,3 @@ mod tests {
         assert_eq!(your_order.count, 1);
     }
 }
-

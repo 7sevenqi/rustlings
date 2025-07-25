@@ -1,6 +1,3 @@
-// Structs contain data, but can also have logic. In this exercise, we have
-// defined the `Package` struct, and we want to test some logic attached to it.
-
 #[derive(Debug)]
 struct Package {
     sender_country: String,
@@ -11,8 +8,6 @@ struct Package {
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
         if weight_in_grams < 10 {
-            // This isn't how you should handle errors in Rust, but we will
-            // learn about error handling later.
             panic!("Can't ship a package with weight below 10 grams");
         }
 
@@ -23,15 +18,14 @@ impl Package {
         }
     }
 
-    // TODO: Add the correct return type to the function signature.
-    fn is_international(&self) {
-        // TODO: Read the tests that use this method to find out when a package
-        // is considered international.
+    // 返回布尔值，表示是否为国际包裹
+    fn is_international(&self) -> bool {
+        self.sender_country != self.recipient_country
     }
 
-    // TODO: Add the correct return type to the function signature.
-    fn get_fees(&self, cents_per_gram: u32) {
-        // TODO: Calculate the package's fees.
+    // 返回费用（u32 类型），计算方式为每克费用乘以重量
+    fn get_fees(&self, cents_per_gram: u32) -> u32 {
+        self.weight_in_grams * cents_per_gram
     }
 }
 
@@ -85,4 +79,3 @@ mod tests {
         assert_eq!(package.get_fees(cents_per_gram * 2), 9000);
     }
 }
-
