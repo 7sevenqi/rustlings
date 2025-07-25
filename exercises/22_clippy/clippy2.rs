@@ -1,11 +1,11 @@
 fn main() {
     let mut res = 42;
     let option = Some(12);
-    // TODO: Fix the Clippy lint.
-    for x in option {
+
+    // 使用 if let 替代 for 循环
+    if let Some(x) = option {
         res += x;
     }
 
-    println!("{res}");
+    println!("{res}"); // 输出 54
 }
-
