@@ -1,6 +1,3 @@
-// Calls of this function should be replaced with calls of `string_slice` or `string`.
-fn placeholder() {}
-
 fn string_slice(arg: &str) {
     println!("{arg}");
 }
@@ -9,30 +6,34 @@ fn string(arg: String) {
     println!("{arg}");
 }
 
-// TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(�?` with either `string_slice(�?`
-// or `string(�?` depending on what you think each value is.
 fn main() {
-    placeholder("blue");
+    // "blue" 是字符串字面量，类型为 &str → 使用 string_slice
+    string_slice("blue");
 
-    placeholder("red".to_string());
+    // "red".to_string() 生成 String → 使用 string
+    string("red".to_string());
 
-    placeholder(String::from("hi"));
+    // String::from("hi") 生成 String → 使用 string
+    string(String::from("hi"));
 
-    placeholder("rust is fun!".to_owned());
+    // "rust is fun!".to_owned() 生成 String → 使用 string
+    string("rust is fun!".to_owned());
 
-    placeholder("nice weather".into());
+    // "nice weather".into() 对字符串字面量调用 into() 生成 String → 使用 string
+    string("nice weather".into());
 
-    placeholder(format!("Interpolation {}", "Station"));
+    // format! 宏返回 String → 使用 string
+    string(format!("Interpolation {}", "Station"));
 
-    // WARNING: This is byte indexing, not character indexing.
-    // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+    // &String::from("abc")[0..1] 是 &str（String 切片的引用）→ 使用 string_slice
+    string_slice(&String::from("abc")[0..1]);
 
-    placeholder("  hello there ".trim());
+    // "  hello there ".trim() 返回 &str → 使用 string_slice
+    string_slice("  hello there ".trim());
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+    // "Happy Monday!".replace(...) 返回 String → 使用 string
+    string("Happy Monday!".replace("Mon", "Tues"));
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    // "mY sHiFt KeY iS sTiCkY".to_lowercase() 返回 String → 使用 string
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }
-
