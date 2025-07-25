@@ -18,13 +18,13 @@ struct OtherStruct;
 impl SomeTrait for OtherStruct {}
 impl OtherTrait for OtherStruct {}
 
-// TODO: Fix the compiler error by only changing the signature of this function.
-fn some_func(item: ???) -> bool {
+// 使用泛型和多 trait 约束，接受同时实现了 SomeTrait 和 OtherTrait 的类型
+fn some_func<T: SomeTrait + OtherTrait>(item: T) -> bool {
     item.some_function() && item.other_function()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 可选：在此处进行实验
 }
 
 #[cfg(test)]
@@ -37,4 +37,3 @@ mod tests {
         assert!(some_func(OtherStruct));
     }
 }
-
