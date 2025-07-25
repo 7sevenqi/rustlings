@@ -5,7 +5,5 @@ fn call_me(num: u8) {
 }
 
 fn main() {
-    // TODO: Fix the function call.
-    call_me();
+    call_me(3); // 传入 u8 类型的参数（字面量默认类型为 i32，但在这种上下文中会自动转换为 u8）
 }
-
