@@ -1,9 +1,7 @@
-// Lifetimes are also needed when structs hold references.
-
-// TODO: Fix the compiler errors about the struct.
-struct Book {
-    author: &str,
-    title: &str,
+// 为结构体添加生命周期参数 'a，表明其引用字段必须至少和 'a 一样长
+struct Book<'a> {
+    author: &'a str,
+    title: &'a str,
 }
 
 fn main() {
@@ -14,4 +12,3 @@ fn main() {
 
     println!("{} by {}", book.title, book.author);
 }
-

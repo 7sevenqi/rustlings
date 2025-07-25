@@ -1,15 +1,11 @@
-// TODO: This function refuses to generate text to be printed on a nametag if
-// you pass it an empty string. It'd be nicer if it explained what the problem
-// was instead of just returning `None`. Thankfully, Rust has a similar
-// construct to `Option` that can be used to express error conditions. Change
-// the function signature and body to return `Result<String, String>` instead
-// of `Option<String>`.
-fn generate_nametag_text(name: String) -> Option<String> {
+// 修改函数返回类型为 Result<String, String>
+fn generate_nametag_text(name: String) -> Result<String, String> {
     if name.is_empty() {
-        // Empty names aren't allowed
-        None
+        // 返回包含错误信息的 Err 变体
+        Err("Empty names aren't allowed".to_string())
     } else {
-        Some(format!("Hi! My name is {name}"))
+        // 返回包含成功值的 Ok 变体
+        Ok(format!("Hi! My name is {name}"))
     }
 }
 
@@ -23,6 +19,7 @@ mod tests {
 
     #[test]
     fn generates_nametag_text_for_a_nonempty_name() {
+        // 使用 as_deref() 将 Result<String, String> 转换为 Result<&str, &str>
         assert_eq!(
             generate_nametag_text("Beyoncé".to_string()).as_deref(),
             Ok("Hi! My name is Beyoncé"),
@@ -31,6 +28,7 @@ mod tests {
 
     #[test]
     fn explains_why_generating_nametag_text_fails() {
+        // 使用 as_ref().map_err(|e| e.as_str()) 将错误类型转换为 &str
         assert_eq!(
             generate_nametag_text(String::new())
                 .as_ref()
@@ -39,4 +37,3 @@ mod tests {
         );
     }
 }
-

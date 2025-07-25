@@ -9,8 +9,15 @@ struct PositiveNonzeroInteger(u64);
 
 impl PositiveNonzeroInteger {
     fn new(value: i64) -> Result<Self, CreationError> {
-        // TODO: This function shouldn't always return an `Ok`.
-        Ok(Self(value as u64))
+        // 验证输入是否为正数且非零
+        if value < 0 {
+            Err(CreationError::Negative)
+        } else if value == 0 {
+            Err(CreationError::Zero)
+        } else {
+            // 安全转换为 u64（因为 value > 0 且 i64::MAX < u64::MAX）
+            Ok(Self(value as u64))
+        }
     }
 }
 
@@ -35,4 +42,3 @@ mod tests {
         assert_eq!(PositiveNonzeroInteger::new(0), Err(CreationError::Zero));
     }
 }
-

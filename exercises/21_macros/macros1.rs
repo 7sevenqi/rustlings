@@ -5,7 +5,6 @@ macro_rules! my_macro {
 }
 
 fn main() {
-    // TODO: Fix the macro call.
-    my_macro();
+    // 正确的宏调用（注意宏名后没有空格，直接跟!和括号）
+    my_macro!();
 }
-

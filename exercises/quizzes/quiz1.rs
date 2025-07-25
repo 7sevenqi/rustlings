@@ -11,11 +11,17 @@
 // TODO: Write a function that calculates the price of an order of apples given
 // the quantity bought.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
-
-fn main() {
-    // You can optionally experiment here.
+fn calculate_price_of_apples(quantity: u32) -> u32 {
+    if quantity > 40 {
+        quantity * 1  // 超过40个时，全部苹果单价1锈币
+    } else {
+        quantity * 2  // 40个及以下时，单价2锈币
+    }
 }
-
+fn main() {
+    // 可以添加一些测试代码，但通常不需要
+    println!("Hello, this is a placeholder main function!");
+}
 // Don't change the tests!
 #[cfg(test)]
 mod tests {
@@ -29,4 +35,3 @@ mod tests {
         assert_eq!(calculate_price_of_apples(65), 65);
     }
 }
-

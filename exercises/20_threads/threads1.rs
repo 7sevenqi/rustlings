@@ -1,8 +1,3 @@
-// This program spawns multiple threads that each runs for at least 250ms, and
-// each thread returns how much time it took to complete. The program should
-// wait until all the spawned threads have finished and should collect their
-// return values into a vector.
-
 use std::{
     thread,
     time::{Duration, Instant},
@@ -22,8 +17,9 @@ fn main() {
 
     let mut results = Vec::new();
     for handle in handles {
-        // TODO: Collect the results of all threads into the `results` vector.
-        // Use the `JoinHandle` struct which is returned by `thread::spawn`.
+        // 等待线程完成并收集结果
+        let result = handle.join().unwrap();
+        results.push(result);
     }
 
     if results.len() != 10 {
@@ -35,4 +31,3 @@ fn main() {
         println!("Thread {i} took {result}ms");
     }
 }
-

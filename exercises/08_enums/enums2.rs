@@ -6,7 +6,16 @@ struct Point {
 
 #[derive(Debug)]
 enum Message {
-    // TODO: Define the different variants used below.
+    // 结构体样式的变体，包含 width 和 height 字段
+    Resize { width: u64, height: u64 },
+    // 元组样式的变体，包含一个 Point 结构体
+    Move(Point),
+    // 元组样式的变体，包含一个 String
+    Echo(String),
+    // 元组样式的变体，包含三个 u32 类型的值（RGB 颜色）
+    ChangeColor(u32, u32, u32),
+    // 单元样式的变体，无关联数据
+    Quit,
 }
 
 impl Message {
@@ -31,4 +40,3 @@ fn main() {
         message.call();
     }
 }
-

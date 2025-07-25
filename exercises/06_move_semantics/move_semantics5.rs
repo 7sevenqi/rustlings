@@ -1,15 +1,12 @@
 #![allow(clippy::ptr_arg)]
 
-// TODO: Fix the compiler errors without changing anything except adding or
-// removing references (the character `&`).
-
-// Shouldn't take ownership
-fn get_char(data: String) -> char {
+// 不应获取所有权，因此参数使用引用
+fn get_char(data: &String) -> char {
     data.chars().last().unwrap()
 }
 
-// Should take ownership
-fn string_uppercase(mut data: &String) {
+// 应获取所有权，因此参数不使用引用
+fn string_uppercase(mut data: String) {
     data = data.to_uppercase();
 
     println!("{data}");
@@ -18,8 +15,7 @@ fn string_uppercase(mut data: &String) {
 fn main() {
     let data = "Rust is great!".to_string();
 
-    get_char(data);
+    get_char(&data); // 传递引用，不转移所有权
 
-    string_uppercase(&data);
+    string_uppercase(data); // 传递所有权
 }
-

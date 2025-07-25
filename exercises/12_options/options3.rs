@@ -7,12 +7,12 @@ struct Point {
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
 
-    // TODO: Fix the compiler error by adding something to this match statement.
-    match optional_point {
-        Some(p) => println!("Coordinates are {},{}", p.x, p.y),
-        _ => panic!("No match!"),
+    // 对 optional_point 取引用，避免所有权转移
+    match &optional_point {
+        Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
+        None => println!("No coordinates provided"),
     }
 
-    println!("{optional_point:?}"); // Don't change this line.
+    // 此时 optional_point 仍有效，可以正常打印
+    println!("{optional_point:?}");
 }
-
