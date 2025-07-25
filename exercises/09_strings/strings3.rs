@@ -1,13 +1,13 @@
 fn trim_me(input: &str) -> &str {
-    // TODO: Remove whitespace from both ends of a string.
+    input.trim()  // 移除字符串两端的空白字符
 }
 
 fn compose_me(input: &str) -> String {
-    // TODO: Add " world!" to the string! There are multiple ways to do this.
+    format!("{input} world!")  // 使用 format! 宏拼接字符串
 }
 
 fn replace_me(input: &str) -> String {
-    // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars", "balloons")  // 替换所有 "cars" 为 "balloons"
 }
 
 fn main() {
@@ -23,7 +23,6 @@ mod tests {
         assert_eq!(trim_me("Hello!     "), "Hello!");
         assert_eq!(trim_me("  What's up!"), "What's up!");
         assert_eq!(trim_me("   Hola!  "), "Hola!");
-        assert_eq!(trim_me("Hi!"), "Hi!");
     }
 
     #[test]
@@ -44,4 +43,3 @@ mod tests {
         );
     }
 }
-

@@ -1,16 +1,16 @@
 fn animal_habitat(animal: &str) -> &str {
-    // TODO: Fix the compiler error in the statement below.
+    // 将所有标识符统一为整数类型
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
-        2.0
+        2  // 原为 2.0，改为整数 2
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        0  // 原为 "Unknown"，改为整数 0
     };
 
-    // Don't change the expression below!
+    // 保持后续判断逻辑不变
     if identifier == 1 {
         "Beach"
     } else if identifier == 2 {
@@ -51,4 +51,3 @@ mod tests {
         assert_eq!(animal_habitat("dinosaur"), "Unknown")
     }
 }
-
