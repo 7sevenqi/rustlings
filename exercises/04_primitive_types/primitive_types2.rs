@@ -26,3 +26,4 @@ fn main() {
         println!("Neither alphabetic nor numeric!");
     }
 }
+

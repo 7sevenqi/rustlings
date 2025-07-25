@@ -87,3 +87,4 @@ mod test {
         assert_eq!(PositiveNonzeroInteger::parse("42"), Ok(x));
     }
 }
+

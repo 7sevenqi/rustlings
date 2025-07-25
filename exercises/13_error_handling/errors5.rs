@@ -54,3 +54,4 @@ fn main() {
     println!("output={:?}", PositiveNonzeroInteger::new(x)?);
     Ok(())
 }
+

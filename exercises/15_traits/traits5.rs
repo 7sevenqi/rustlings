@@ -37,3 +37,4 @@ mod tests {
         assert!(some_func(OtherStruct));
     }
 }
+

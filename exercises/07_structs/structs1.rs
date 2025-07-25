@@ -45,3 +45,4 @@ mod tests {
         assert_eq!(message, "UnitStructs are fun!");
     }
 }
+

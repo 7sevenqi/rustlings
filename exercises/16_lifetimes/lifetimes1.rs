@@ -26,3 +26,4 @@ mod tests {
         assert_eq!(longest("abc", "1234"), "1234");
     }
 }
+

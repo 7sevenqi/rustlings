@@ -35,3 +35,4 @@ mod tests {
         assert_eq!(picky_eater("literally anything"), "No thanks!");
     }
 }
+

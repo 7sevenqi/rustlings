@@ -175,3 +175,4 @@ mod tests {
         assert_eq!(Color::try_from(&v[..]), Err(BadLen));
     }
 }
+

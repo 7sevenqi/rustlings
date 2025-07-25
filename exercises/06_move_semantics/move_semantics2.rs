@@ -26,3 +26,4 @@ mod tests {
         assert_eq!(vec1, [22, 44, 66, 88]);
     }
 }
+

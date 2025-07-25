@@ -10,8 +10,8 @@ fn string(arg: String) {
 }
 
 // TODO: Here are a bunch of values - some are `String`, some are `&str`.
-// Your task is to replace `placeholder(â€¦)` with either `string_slice(â€¦)`
-// or `string(â€¦)` depending on what you think each value is.
+// Your task is to replace `placeholder(â€?` with either `string_slice(â€?`
+// or `string(â€?` depending on what you think each value is.
 fn main() {
     placeholder("blue");
 
@@ -35,3 +35,4 @@ fn main() {
 
     placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }
+

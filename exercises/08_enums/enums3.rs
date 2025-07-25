@@ -86,3 +86,4 @@ mod tests {
         assert!(state.quit);
     }
 }
+

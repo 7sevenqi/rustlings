@@ -29,3 +29,4 @@ mod tests {
         assert_eq!(Wrapper::new("Foo").value, "Foo");
     }
 }
+

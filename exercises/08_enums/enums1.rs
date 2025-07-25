@@ -10,3 +10,4 @@ fn main() {
     println!("{:?}", Message::ChangeColor);
     println!("{:?}", Message::Quit);
 }
+

@@ -29,3 +29,4 @@ mod tests {
         assert_eq!(calculate_price_of_apples(65), 65);
     }
 }
+

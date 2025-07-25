@@ -75,3 +75,4 @@ England,Spain,1,0";
         assert_eq!(team.goals_conceded, 3);
     }
 }
+

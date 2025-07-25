@@ -13,3 +13,4 @@ fn main() {
     my_macro!();
     my_macro!(7777);
 }
+

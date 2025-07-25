@@ -47,3 +47,4 @@ mod tests {
         let _rect = Rectangle::new(10, -10);
     }
 }
+

@@ -22,3 +22,4 @@ fn main() {
     println!("The current exercise path will be always shown under the progress bar.");
     println!("You can click on the path to open the exercise file in your editor.");
 }
+

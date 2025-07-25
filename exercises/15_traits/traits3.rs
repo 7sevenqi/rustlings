@@ -36,3 +36,4 @@ mod tests {
         assert_eq!(other_software.licensing_info(), licensing_info);
     }
 }
+

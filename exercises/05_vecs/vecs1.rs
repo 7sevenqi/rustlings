@@ -22,3 +22,4 @@ mod tests {
         assert_eq!(a, *v);
     }
 }
+

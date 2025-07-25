@@ -35,3 +35,4 @@ fn main() {
         println!("Thread {i} took {result}ms");
     }
 }
+

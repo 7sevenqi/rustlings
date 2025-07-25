@@ -20,3 +20,4 @@ mod tests {
         assert_eq!(foo.pop().unwrap(), "Foo");
     }
 }
+

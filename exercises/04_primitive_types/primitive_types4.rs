@@ -14,3 +14,4 @@ mod tests {
         assert_eq!([2, 3, 4], nice_slice);
     }
 }
+

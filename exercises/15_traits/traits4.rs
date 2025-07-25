@@ -33,3 +33,4 @@ mod tests {
         assert!(compare_license_types(OtherSoftware, SomeSoftware));
     }
 }
+

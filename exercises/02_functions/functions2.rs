@@ -8,3 +8,4 @@ fn call_me(num:) {
 fn main() {
     call_me(3);
 }
+

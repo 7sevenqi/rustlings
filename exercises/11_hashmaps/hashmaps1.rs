@@ -38,3 +38,4 @@ mod tests {
         assert!(basket.values().sum::<u32>() >= 5);
     }
 }
+

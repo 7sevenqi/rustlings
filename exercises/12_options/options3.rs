@@ -15,3 +15,4 @@ fn main() {
 
     println!("{optional_point:?}"); // Don't change this line.
 }
+

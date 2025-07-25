@@ -8,3 +8,4 @@ fn main() {
     // TODO: Fix the macro call.
     my_macro();
 }
+

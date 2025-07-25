@@ -111,3 +111,4 @@ mod tests {
         assert_eq!("John,32,man".parse::<Person>(), Err(BadLen));
     }
 }
+

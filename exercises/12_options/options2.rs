@@ -37,3 +37,4 @@ mod tests {
         assert_eq!(cursor, 0);
     }
 }
+

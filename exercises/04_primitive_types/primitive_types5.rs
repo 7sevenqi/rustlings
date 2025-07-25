@@ -6,3 +6,4 @@ fn main() {
 
     println!("{name} is {age} years old");
 }
+

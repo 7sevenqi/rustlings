@@ -60,3 +60,4 @@ mod tests {
         assert_eq!(*num, 9);
     }
 }
+

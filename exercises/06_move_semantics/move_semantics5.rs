@@ -22,3 +22,4 @@ fn main() {
 
     string_uppercase(&data);
 }
+

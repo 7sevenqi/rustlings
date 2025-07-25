@@ -24,3 +24,4 @@ fn main() {
         delicious_snacks::veggie,
     );
 }
+

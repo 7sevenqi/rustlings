@@ -3,11 +3,11 @@
 // different threads simultaneously. Each thread is going to get the sum of
 // every eighth value with an offset.
 //
-// The first thread (offset 0), will sum 0, 8, 16, â€¦
-// The second thread (offset 1), will sum 1, 9, 17, â€¦
-// The third thread (offset 2), will sum 2, 10, 18, â€¦
-// â€¦
-// The eighth thread (offset 7), will sum 7, 15, 23, â€¦
+// The first thread (offset 0), will sum 0, 8, 16, â€?
+// The second thread (offset 1), will sum 1, 9, 17, â€?
+// The third thread (offset 2), will sum 2, 10, 18, â€?
+// â€?
+// The eighth thread (offset 7), will sum 7, 15, 23, â€?
 //
 // Each thread should own a reference-counting pointer to the vector of
 // numbers. But `Rc` isn't thread-safe. Therefore, we need to use `Arc`.
@@ -43,3 +43,4 @@ fn main() {
         handle.join().unwrap();
     }
 }
+

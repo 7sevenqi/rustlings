@@ -23,3 +23,4 @@ mod tests {
         assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
     }
 }
+

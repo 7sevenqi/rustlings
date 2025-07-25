@@ -71,3 +71,4 @@ mod tests {
         assert_eq!(list_of_results(), [Ok(1), Ok(11), Ok(1426), Ok(3)]);
     }
 }
+

@@ -27,3 +27,4 @@ fn main() {
     value_b = value_a;
     println!("value a: {value_a}; value b: {value_b}");
 }
+

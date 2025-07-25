@@ -28,3 +28,4 @@ mod tests {
         assert_eq!(String::from("").append_bar().append_bar(), "BarBar");
     }
 }
+
